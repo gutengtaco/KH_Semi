@@ -1,0 +1,65 @@
+--------------------------------------------------------
+--  파일이 생성됨 - 월요일-5월-30-2022   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table PURCHASE
+--------------------------------------------------------
+
+  CREATE TABLE "NA"."PURCHASE" 
+   (	"PUR_NO" NUMBER, 
+	"PUR_DATE" DATE DEFAULT SYSDATE, 
+	"PUR_STATUS" VARCHAR2(30 BYTE) DEFAULT '주문완료', 
+	"PUR_ADDRESS" VARCHAR2(100 BYTE), 
+	"CARTLIST" VARCHAR2(3000 BYTE), 
+	"MEM_NO" NUMBER
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+REM INSERTING into NA.PURCHASE
+SET DEFINE OFF;
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (2,to_date('22/05/30','RR/MM/DD'),'주문완료','우주 우장산','2',105);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (3,to_date('22/05/28','RR/MM/DD'),'주문완료','우장산동 발산리','3',154);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (4,to_date('22/05/29','RR/MM/DD'),'주문완료','인천 서구 어딘가','4',154);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (5,to_date('22/05/30','RR/MM/DD'),'주문완료','강서구 우장산동','5',154);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (6,to_date('22/05/30','RR/MM/DD'),'주문완료','서울시 강동구','6/7',210);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (7,to_date('22/05/30','RR/MM/DD'),'주문완료','우장산으로','9',105);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (8,to_date('22/05/30','RR/MM/DD'),'주문완료','우장산','10',154);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (9,to_date('22/05/30','RR/MM/DD'),'주문완료','우장산동','11',154);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (10,to_date('22/05/30','RR/MM/DD'),'주문완료','서울시 강동구','12/13',210);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (11,to_date('22/05/30','RR/MM/DD'),'주문완료','서울시 금천구','14',104);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (12,to_date('22/05/30','RR/MM/DD'),'주문완료','여기요','15/17',216);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (13,to_date('22/05/30','RR/MM/DD'),'주문완료','인천','18/19',217);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (14,to_date('22/05/30','RR/MM/DD'),'주문완료','인천광역시 ','22',218);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (9999,to_date('22/05/29','RR/MM/DD'),'Y','ZZ','9999',105);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (1,to_date('22/05/30','RR/MM/DD'),'주문완료','우장산역','1',105);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (15,to_date('22/05/30','RR/MM/DD'),'주문완료','안드로메다','16/27',214);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (16,to_date('22/05/30','RR/MM/DD'),'주문완료','비밀~','26',213);
+Insert into NA.PURCHASE (PUR_NO,PUR_DATE,PUR_STATUS,PUR_ADDRESS,CARTLIST,MEM_NO) values (17,to_date('22/05/30','RR/MM/DD'),'주문완료','우리집','24/28',219);
+--------------------------------------------------------
+--  DDL for Index SYS_C007738
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "NA"."SYS_C007738" ON "NA"."PURCHASE" ("PUR_NO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  Constraints for Table PURCHASE
+--------------------------------------------------------
+
+  ALTER TABLE "NA"."PURCHASE" ADD PRIMARY KEY ("PUR_NO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "NA"."PURCHASE" MODIFY ("CARTLIST" NOT NULL ENABLE);
+  ALTER TABLE "NA"."PURCHASE" MODIFY ("PUR_ADDRESS" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table PURCHASE
+--------------------------------------------------------
+
+  ALTER TABLE "NA"."PURCHASE" ADD FOREIGN KEY ("MEM_NO")
+	  REFERENCES "NA"."MEMBER" ("MEM_NO") ENABLE;
